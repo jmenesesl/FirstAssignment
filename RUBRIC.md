@@ -11,30 +11,3 @@ Standards | Program is stylistically well designed (i.e. meaningful identifiers 
 Documentation | Program is well documented | Missing one required comment | Missing two or more required comments | Most or all documentation is missing | 0
 Modularity | Program is decomposed into coherent and reusable units, and unnecessary repetition has been eliminated | Program is decomposed into coherent units, but may still contain some unnecessary repetition | Program is decomposed into units of appropriate size, but they lack coherence or reusability. Program contains unnecessary repetition | Program is one big function or is decomposed in ways that make little sense | 0
 Date delivery completion | Program is completed on time | Program is one day late | Program is two days late | Program is more than two days late | 0
----
-Score | Qualification
----------- | ----------
-0 | 0.000
-1 | 0.357
-2 | 0.714
-3 | 1.071
-4 | 1.429
-5 | 1.786
-6 | 2.143
-7 | 2.500
-8 | 2.857
-9 | 3.214
-10 | 3.571
-11 | 3.929
-12 | 4.286
-13 | 4.643
-14 | 5.000
-15 | 5.714
-16 | 6.429
-17 | 7.143
-18 | 7.857
-19 | 8.571
-20 | 9.286
-21 | 10.000
-
- 
