@@ -11,8 +11,10 @@ public final class ReviewImpl implements Review {
 
 	/**
 	 * 
-	 * @param values and array of unordered integers
-	 * @param n    the value to check out
+	 * @param values
+	 *            and array of unordered integers
+	 * @param n
+	 *            the value to check out
 	 * @return the frequency of n in values
 	 */
 	private int frequency(int[] values, int n) {
@@ -34,7 +36,7 @@ public final class ReviewImpl implements Review {
 	 */
 	@Override
 	public double frequencyPercentage(int[] values, int n) {
-		return ((double) frequency(values, n)) / values.length * 100;
+		return values.length == 0 ? 0 : ((double) frequency(values, n)) / values.length * 100;
 	}
 
 	/*
@@ -59,7 +61,9 @@ public final class ReviewImpl implements Review {
 
 	/*
 	 * This method returns an integer matrix with row 0 holding even numbers and
-	 * row 1 holding odd numbers NOTE: Don't waste space!!!
+	 * row 1 holding odd numbers.
+	 * 
+	 * NOTE: Don't waste space!!!
 	 */
 	@Override
 	public int[][] split(int[] values) {
