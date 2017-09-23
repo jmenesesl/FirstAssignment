@@ -21,5 +21,3 @@ Documentation | Program is well documented | Missing one required comment | Miss
 Modularity | Program is decomposed into coherent and reusable units, and unnecessary repetition has been eliminated | Program is decomposed into coherent units, but may still contain some unnecessary repetition | Program is decomposed into units of appropriate size, but they lack coherence or reusability. Program contains unnecessary repetition | Program is one big function or is decomposed in ways that make little sense | 0
 Date delivery completion | Program is completed on time | Program is one day late | Program is two days late | Program is more than two days late | 0
  
-
-
