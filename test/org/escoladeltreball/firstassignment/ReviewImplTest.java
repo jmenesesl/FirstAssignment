@@ -13,7 +13,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
- * @author jmendez
+ * @author Pep Méndez
  *
  */
 public class ReviewImplTest {
