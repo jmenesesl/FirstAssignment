@@ -18,8 +18,15 @@ public final class ReviewImpl implements Review {
 	 */
 	@Override
 	public double frequencyPercentage(int[] values, int n) {
-		return 0.0;
+		int counter = 0;
+		for (int value : values) {
+			if (n == value) {
+				counter++;
+			}
+		}
+		return counter;
 	}
+	
 
 	/*
 	 * (non-Javadoc)
