@@ -68,6 +68,11 @@ public final class ReviewImpl implements Review {
 	 */
 	@Override
 	public int[][] split(int[] values) {
+		int[][] matrix = new int[2][];
+		int evenNumbersCounter = 0, oddNumbersCounter = 0;
+		int evenNumbersIndex = 0, oddNumbersIndex = 0;
+		
+		
 		
 		
 		
