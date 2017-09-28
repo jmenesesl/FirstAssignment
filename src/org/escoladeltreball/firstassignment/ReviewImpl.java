@@ -19,7 +19,7 @@ public final class ReviewImpl implements Review {
 		ReviewImpl main = new ReviewImpl();
 		
 		int[] values = {3, 7, 9, 10, 13, 21 };
-		int[] result = main.merge(values, 11);
+		int[] result = main.merge(values, 12);
 		System.out.println(Arrays.toString(result));
 		
 	}
@@ -63,23 +63,17 @@ public final class ReviewImpl implements Review {
 	@Override
 	public int[] merge(int[] values, int n) {
 		int[] result = new int[values.length+1];
-		int j = 0;
-		int indexOriginal = 0;
-		for (int i = 0; i < values.length; i++) {
-			if (values[i] <= n) {
-				result[j] = values[i];
-				result[j+1] = n;
-				j++;
-			}
-			indexOriginal = i - 1;
+		int i = 0;
+		while( i < values.length && values[i] <= n) { // Se añadiran uno a uno si el numero a añadir es mayor a el resto.
+			result[i] = values[i];
+			i++;
 		}
-		j++;
+		result[i] = n;
 		
-		while(j < result.length) {
-			result[j] = values[indexOriginal];
-			indexOriginal++;
-			j++;
-		}		
+		while(i < values.length) {
+			result[i + 1] = values[i];
+			i++;
+		}
 		return result;
 
 	}
