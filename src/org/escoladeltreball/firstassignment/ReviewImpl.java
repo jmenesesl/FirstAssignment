@@ -20,8 +20,11 @@ public final class ReviewImpl implements Review {
 		
 		int[] values = {3, 7, 9, 10, 13, 21 };
 		int[] result = main.merge(values, 12);
-		System.out.println(Arrays.toString(result));
+		// System.out.println(Arrays.toString(result));
 		
+		int[] values1 = { 1, 2, 3, 5, 7, 9, 11, 15 };
+		main.split(values1);
+	    
 	}
 	/**
 	 * 
@@ -50,7 +53,6 @@ public final class ReviewImpl implements Review {
 	 */
 	@Override
 	public double frequencyPercentage(int[] values, int n) {
-		
 		return  values.length == 0 ? 0 : ((double) frequency(values, n)) / values.length * 100;
 	}
 	
@@ -62,19 +64,19 @@ public final class ReviewImpl implements Review {
 	 */
 	@Override
 	public int[] merge(int[] values, int n) {
-		int[] result = new int[values.length+1];
+		int[] valuesMerged = new int[values.length+1];
 		int i = 0;
 		while( i < values.length && values[i] <= n) { // Se añadiran uno a uno si el numero a añadir es mayor a el resto.
-			result[i] = values[i];
+			valuesMerged[i] = values[i];
 			i++;
 		}
-		result[i] = n;
+		valuesMerged[i] = n;
 		
 		while(i < values.length) {
-			result[i + 1] = values[i];
+			valuesMerged[i + 1] = values[i];
 			i++;
 		}
-		return result;
+		return valuesMerged;
 
 	}
 
@@ -86,7 +88,32 @@ public final class ReviewImpl implements Review {
 	 */
 	@Override
 	public int[][] split(int[] values) {
-		return null;
+		int numbersOdd = 0; // determinar cantidad de numeros pares e inpares
+		int numbersEven = 0;
+		int indexEven = 0; // Indices para añadir los numeros pares e inpares
+		int indexOdd = 0;
+		for (int i = 0; i < values.length; i++) {
+			if ((values[i] % 2) == 0) {
+				numbersEven++;
+			} else {
+				numbersOdd++;
+			}
+		}
+//		System.out.println("pares: " + numbersEven + " Inpares: " + numbersOdd);
+		int[][] splited = new int[2][]; // Creo un array de 2 x ?
+			splited[0] = new int [numbersEven];
+			splited[1] = new int [numbersOdd];
+
+		for(int i = 0; i < values.length; i++) {
+			if(values[i] % 2 == 0) {
+				splited[0][indexEven] = values[i];
+				indexEven++;
+			} else {
+				splited[1][indexOdd] = values[i];
+				indexOdd++;
+			}
+		}
+		return splited;
 	}
 
 }

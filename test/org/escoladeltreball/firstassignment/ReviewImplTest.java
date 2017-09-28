@@ -57,7 +57,7 @@ public class ReviewImplTest {
 	 * Test method for
 	 * {@link org.escoladeltreball.ReviewImpl.Main#frequencyPercentage(int[], int)}.
 	 */
-	@Ignore
+//	@Ignore
 	@Test
 	public final void testFrequencyPercentage() {
 		int[] values = { 3, 4, 3, 5, 1, 2, 3, 0 };
@@ -72,12 +72,11 @@ public class ReviewImplTest {
 	 * Test method for
 	 * {@link org.escoladeltreball.ReviewImpl.Main#merge(int[], int)}.
 	 */
-	@Ignore
+	//@Ignore
 	@Test
 	public final void testMerge() {
 		int[] values = { 1, 2, 3, 5, 7, 9, 11, 15 };
 		int[] values2 = { 1, 1, 1, 1, 1, 1, 1, 1 };
-		System.out.println(Arrays.toString(main.merge(values, 0)));
 		assertArrayEquals(new int[] { 0, 1, 2, 3, 5, 7, 9, 11, 15 }, main.merge(values, 0));
 		assertArrayEquals(new int[] { 1, 2, 3, 5, 6, 7, 9, 11, 15 }, main.merge(values, 6));
 		assertArrayEquals(new int[] { 1, 2, 3, 5, 7, 9, 11, 15, 19 }, main.merge(values, 19));
@@ -90,7 +89,7 @@ public class ReviewImplTest {
 	 * Test method for
 	 * {@link org.escoladeltreball.ReviewImpl.Main#split(int[])}.
 	 */
-	@Ignore
+	//@Ignore
 	@Test
 	public final void testSplit() {
 		int[] values = { 1, 2, 3, 5, 7, 9, 11, 15 };
