@@ -71,13 +71,23 @@ public final class ReviewImpl implements Review {
 		int[][] matrix = new int[2][];
 		int evenNumbersCounter = 0, oddNumbersCounter = 0;
 		int evenNumbersIndex = 0, oddNumbersIndex = 0;
-		
-		
-		
-		
-		
-		
-		return null;
+		for (int i = 0; i < values.length; i++) {
+			if (values[i] % 2 == 0) {
+				evenNumbersCounter++;
+			} else {
+				oddNumbersCounter++;
+			}
+		}
+		matrix[0] = new int[evenNumbersCounter];
+		matrix[1] = new int[oddNumbersCounter];
+		for (int i = 0; i < values.length; i++) {
+			if (values[i] % 2 == 0) {
+				matrix[0][evenNumbersIndex++] = values[i];
+			} else {
+				matrix[1][oddNumbersIndex++] = values[i];
+			}
+		}		
+		return matrix;
 	}
 
 }
