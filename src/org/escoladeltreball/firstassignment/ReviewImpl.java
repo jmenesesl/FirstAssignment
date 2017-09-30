@@ -45,11 +45,11 @@ public final class ReviewImpl implements Review {
 	}
 	
 	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * org.escoladeltreball.firstassignment.Utils#frequencyPercentage(int[],
-	 * int)
+	 * @param values
+	 *            and array of unordered integers
+	 * @param n
+	 *            the value to check out
+	 * @return the frequency in percentage of n in values 
 	 */
 	@Override
 	public double frequencyPercentage(int[] values, int n) {
@@ -58,9 +58,11 @@ public final class ReviewImpl implements Review {
 	
 
 	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.escoladeltreball.firstassignment.Utils#merge(int[], int)
+	 * @param values
+	 *            and array of ordered integers
+	 * @param n
+	 *            the value to add
+	 * @return the Array of n and values merged
 	 */
 	@Override
 	public int[] merge(int[] values, int n) {
